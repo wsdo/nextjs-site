@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "alias": "nextjs.top",
+  "alias": ["nextjs.top"],
   "builds": [
     { "src": "package.json", "use": "@now/static-build" }
   ],

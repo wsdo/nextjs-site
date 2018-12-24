@@ -16,7 +16,7 @@
     "prettier": "prettier **/*.js --write --single-quote",
     "lint-staged": "lint-staged",
     "now-build": "next build && next export -o dist",
-    "deploy": "cd dist && now --public"
+    "deploy": "now && now alias"
   },
   "pre-commit": "lint-staged",
   "lint-staged": {
