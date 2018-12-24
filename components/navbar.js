@@ -140,7 +140,7 @@ export default withRouter(({ isMobile, router, hideLogo = false }) => {
                       title="Documentation"
                       role="button"
                     >
-                      Docs
+                      文档
                     </a>
                   </Link>
                   <Link href="/learn">
@@ -151,7 +151,7 @@ export default withRouter(({ isMobile, router, hideLogo = false }) => {
                       title="Learn"
                       role="button"
                     >
-                      Learn
+                      教程
                     </a>
                   </Link>
                   <Link href="/showcase" prefetch>
@@ -162,7 +162,7 @@ export default withRouter(({ isMobile, router, hideLogo = false }) => {
                       title="Showcase"
                       role="button"
                     >
-                      Showcase
+                      案列
                     </a>
                   </Link>
                   <Link href="/blog" prefetch>
@@ -173,7 +173,7 @@ export default withRouter(({ isMobile, router, hideLogo = false }) => {
                       title="Blog"
                       role="button"
                     >
-                      Blog
+                      博客
                     </a>
                   </Link>
                   {
@@ -283,7 +283,7 @@ export default withRouter(({ isMobile, router, hideLogo = false }) => {
                     title="Documentation"
                     role="button"
                   >
-                    Docs
+                    文档
                   </a>
                 </Link>
                 <Link href="/learn">
@@ -294,7 +294,7 @@ export default withRouter(({ isMobile, router, hideLogo = false }) => {
                     title="Learn"
                     role="button"
                   >
-                    Learn
+                    教程
                   </a>
                 </Link>
                 <Link href="/showcase" prefetch>
@@ -305,7 +305,7 @@ export default withRouter(({ isMobile, router, hideLogo = false }) => {
                     title="Showcase"
                     role="button"
                   >
-                    Showcase
+                    案列
                   </a>
                 </Link>
               </div>

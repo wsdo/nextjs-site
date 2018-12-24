@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "zeit/next-site",
   "author": "",
-  "homepage": "https://nextjs.org",
+  "homepage": "https://nextjs.top",
   "license": "MIT",
   "scripts": {
     "dev": "next",
@@ -15,7 +15,8 @@
     "lint": "eslint",
     "prettier": "prettier **/*.js --write --single-quote",
     "lint-staged": "lint-staged",
-    "now-build": "next build && next export -o dist"
+    "now-build": "next build && next export -o dist",
+    "deploy": "cd dist && now --public"
   },
   "pre-commit": "lint-staged",
   "lint-staged": {
