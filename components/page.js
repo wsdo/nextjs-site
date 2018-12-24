@@ -17,7 +17,7 @@ export default withMediaQuery(({ title, description, children }) => (
         name="description"
         content={
           description ||
-          'Next.js is a lightweight framework for static and server-rendered applications'
+          'nextjs 中文网，nextjs 中文文档，nextjs教程'
         }
       />
     </Head>
