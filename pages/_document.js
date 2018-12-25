@@ -63,6 +63,20 @@ export default class NextSite extends Document {
               `
             }}
           />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              var _hmt = _hmt || [];
+              (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?287f282ceb0c7c8ae80f3b24a42542bb";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+              })();
+              `
+            }}
+          />
+
         </body>
       </html>
     );
