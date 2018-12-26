@@ -52,7 +52,7 @@ export default () => (
 
 ### CSS
 
-#### Built-in CSS support
+#### 内置css支持
 
 <details>
   <summary><b>Examples</b></summary>
@@ -107,7 +107,7 @@ export default () => <p style={{ color: 'red' }}>hi there</p>
 
 To use more sophisticated CSS-in-JS solutions, you typically have to implement style flushing for server-side rendering. We enable this by allowing you to define your own [custom `<Document>`](#user-content-custom-document) component that wraps each page.
 
-#### Importing CSS / Sass / Less / Stylus files
+#### 导入 CSS / Sass / Less / Stylus files
 
 To support importing `.css`, `.scss`, `.less` or `.styl` files you can use these modules, which configure sensible defaults for server rendered applications.
 
@@ -116,7 +116,7 @@ To support importing `.css`, `.scss`, `.less` or `.styl` files you can use these
 - [@zeit/next-less](https://github.com/zeit/next-plugins/tree/master/packages/next-less)
 - [@zeit/next-stylus](https://github.com/zeit/next-plugins/tree/master/packages/next-stylus)
 
-### Static file serving (e.g.: images)
+### 静态文件服务 (如: images)
 
 Create a folder called `static` in your project root directory. From your code you can then reference those files with `/static/` URLs:
 
@@ -126,7 +126,7 @@ export default () => <img src="/static/my-image.png" alt="my image" />
 
 _Note: Don't name the `static` directory anything else. The name is required and is the only directory that Next.js uses for serving static assets._
 
-### Populating `<head>`
+### 填充 `<head>`
 
 <details>
   <summary><b>Examples</b></summary>
@@ -175,7 +175,7 @@ In this case only the second `<meta name="viewport" />` is rendered.
 
 _Note: The contents of `<head>` get cleared upon unmounting the component, so make sure each page completely defines what it needs in `<head>`, without making assumptions about what other pages added_
 
-### Fetching data and component lifecycle
+### 获取数据和组件生命周期
 
 <details>
   <summary><b>Examples</b></summary>
@@ -245,7 +245,7 @@ export default Page
 - `jsonPageRes` - [Fetch Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) object (client only)
 - `err` - Error object if any error is encountered during the rendering
 
-### Routing
+### 路由
 
 #### With `<Link>`
 
@@ -581,7 +581,7 @@ export default withRouter(ActiveLink)
 
 The above `router` object comes with an API similar to [`next/router`](#imperatively).
 
-### Prefetching Pages
+### 预读取页面
 
 ⚠️ This is a production only feature ⚠️
 
@@ -673,7 +673,7 @@ class MyLink extends React.Component {
 export default withRouter(MyLink)
 ```
 
-### Custom server and routing
+### 自定义服务和路由
 
 <details>
   <summary><b>Examples</b></summary>
@@ -806,7 +806,7 @@ app.prepare().then(() => {
 
 ```
 
-### Dynamic Import
+### 动态导入
 
 <details>
   <summary><b>Examples</b></summary>
