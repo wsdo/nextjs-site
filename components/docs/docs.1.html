@@ -1,0 +1,1548 @@
+<!DOCTYPE html><html><head>
+      <title>docs.1</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h2 class="mume-header" id="how-to-use">How to use</h2>
+
+<h3 class="mume-header" id="setup">Setup</h3>
+
+<p>Install it:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> --save next react react-dom
+</pre><p>and add a script to your package.json like this:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;next&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;next build&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;start&quot;</span><span class="token operator">:</span> <span class="token string">&quot;next start&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>After that, the file-system is the main API. Every <code>.js</code> file becomes a route that gets automatically processed and rendered.</p>
+<p>Populate <code>./pages/index.js</code> inside your project:</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>Welcome to next<span class="token punctuation">.</span>js<span class="token operator">!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</pre><p>and then just run <code>npm run dev</code> and go to <code>http://localhost:3000</code>. To use another port, you can run <code>npm run dev -- -p &lt;your port here&gt;</code>.</p>
+<p>So far, we get:</p>
+<ul>
+<li>Automatic transpilation and bundling (with webpack and babel)</li>
+<li>Hot code reloading</li>
+<li>Server rendering and indexing of <code>./pages</code></li>
+<li>Static file serving. <code>./static/</code> is mapped to <code>/static/</code> (given you <a href="#static-file-serving-eg-images">create a <code>./static/</code> directory</a> inside your project)</li>
+</ul>
+<p>To see how simple this is, check out the <a href="https://github.com/zeit/nextgram">sample app - nextgram</a></p>
+<h3 class="mume-header" id="automatic-code-splitting">Automatic code splitting</h3>
+
+<p>Every <code>import</code> you declare gets bundled and served with each page. That means pages never load unnecessary code!</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> cowsay <span class="token keyword">from</span> <span class="token string">&apos;cowsay-browser&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pre</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">{</span>cowsay<span class="token punctuation">.</span><span class="token function">say</span><span class="token punctuation">(</span><span class="token punctuation">{</span> text<span class="token punctuation">:</span> <span class="token string">&apos;hi there!&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>pre</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><h3 class="mume-header" id="css">CSS</h3>
+
+<h4 class="mume-header" id="built-in-css-support">Built-in CSS support</h4>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul><li><a target="_blank" href="../../examples/basic-css">Basic css</a></li></ul>
+</details>
+<p>We bundle <a href="https://github.com/zeit/styled-jsx">styled-jsx</a> to provide support for isolated scoped CSS. The aim is to support &quot;shadow CSS&quot; similar to Web Components, which unfortunately <a href="https://github.com/w3c/webcomponents/issues/71">do not support server-rendering and are JS-only</a>.</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    Hello world
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>scoped<span class="token operator">!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">jsx</span><span class="token punctuation">&gt;</span></span><span class="token style language-css"><span class="token punctuation">{</span><span class="token selector">`
+      p </span><span class="token punctuation">{</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token selector">div </span><span class="token punctuation">{</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token atrule"><span class="token rule">@media</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token number">600</span>px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+        <span class="token selector">div </span><span class="token punctuation">{</span>
+          <span class="token property">background</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    `<span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">global</span> <span class="token attr-name">jsx</span><span class="token punctuation">&gt;</span></span><span class="token style language-css"><span class="token punctuation">{</span><span class="token selector">`
+      body </span><span class="token punctuation">{</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    `<span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><p>Please see the <a href="https://www.npmjs.com/package/styled-jsx">styled-jsx documentation</a> for more examples.</p>
+<h4 class="mume-header" id="css-in-js">CSS-in-JS</h4>
+
+<details>
+  <summary>
+    <b>Examples</b>
+    </summary>
+  <ul><li><a target="_blank" href="../../examples/with-styled-components">Styled components</a></li><li><a target="_blank" href="../../examples/with-styletron">Styletron</a></li><li><a target="_blank" href="../../examples/with-glamor">Glamor</a></li><li><a target="_blank" href="../../examples/with-glamorous">Glamorous</a></li><li><a target="_blank" href="../../examples/with-cxs">Cxs</a></li><li><a target="_blank" href="../../examples/with-aphrodite">Aphrodite</a></li><li><a target="_blank" href="../../examples/with-fela">Fela</a></li></ul>
+</details>
+<p>It&apos;s possible to use any existing CSS-in-JS solution. The simplest one is inline styles:</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> color<span class="token punctuation">:</span> <span class="token string">&apos;red&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>hi there<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</pre><p>To use more sophisticated CSS-in-JS solutions, you typically have to implement style flushing for server-side rendering. We enable this by allowing you to define your own <a href="#user-content-custom-document">custom <code>&lt;Document&gt;</code></a> component that wraps each page.</p>
+<h4 class="mume-header" id="importing-css-sass-less-stylus-files">Importing CSS / Sass / Less / Stylus files</h4>
+
+<p>To support importing <code>.css</code>, <code>.scss</code>, <code>.less</code> or <code>.styl</code> files you can use these modules, which configure sensible defaults for server rendered applications.</p>
+<ul>
+<li><a href="https://github.com/zeit/next-plugins/tree/master/packages/next-css">@zeit/next-css</a></li>
+<li><a href="https://github.com/zeit/next-plugins/tree/master/packages/next-sass">@zeit/next-sass</a></li>
+<li><a href="https://github.com/zeit/next-plugins/tree/master/packages/next-less">@zeit/next-less</a></li>
+<li><a href="https://github.com/zeit/next-plugins/tree/master/packages/next-stylus">@zeit/next-stylus</a></li>
+</ul>
+<h3 class="mume-header" id="static-file-serving-eg-images">Static file serving (e.g.: images)</h3>
+
+<p>Create a folder called <code>static</code> in your project root directory. From your code you can then reference those files with <code>/static/</code> URLs:</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/static/my-image.png<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>my image<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</pre><p><em>Note: Don&apos;t name the <code>static</code> directory anything else. The name is required and is the only directory that Next.js uses for serving static assets.</em></p>
+<h3 class="mume-header" id="populating-head">Populating <code>&lt;head&gt;</code></h3>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul>
+    <li><a target="_blank" href="../../examples/head-elements">Head elements</a></li>
+    <li><a target="_blank" href="../../examples/layout-component">Layout component</a></li>
+  </ul>
+</details>
+<p>We expose a built-in component for appending elements to the <code>&lt;head&gt;</code> of the page.</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> Head <span class="token keyword">from</span> <span class="token string">&apos;next/head&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Head</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>My page title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>initial-scale=1.0, width=device-width<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Hello world<span class="token operator">!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><p>To avoid duplicate tags in your <code>&lt;head&gt;</code> you can use the <code>key</code> property, which will make sure the tag is only rendered once:</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> Head <span class="token keyword">from</span> <span class="token string">&apos;next/head&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Head</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>My page title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>initial-scale=1.0, width=device-width<span class="token punctuation">&quot;</span></span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Head</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>initial-scale=1.2, width=device-width<span class="token punctuation">&quot;</span></span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>viewport<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Hello world<span class="token operator">!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><p>In this case only the second <code>&lt;meta name=&quot;viewport&quot; /&gt;</code> is rendered.</p>
+<p><em>Note: The contents of <code>&lt;head&gt;</code> get cleared upon unmounting the component, so make sure each page completely defines what it needs in <code>&lt;head&gt;</code>, without making assumptions about what other pages added</em></p>
+<h3 class="mume-header" id="fetching-data-and-component-lifecycle">Fetching data and component lifecycle</h3>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul><li><a target="_blank" href="../../examples/data-fetch">Data fetch</a></li></ul>
+</details>
+<p>When you need state, lifecycle hooks or <strong>initial data population</strong> you can export a <code>React.Component</code> (instead of a stateless function, like shown above):</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">extends</span> React<span class="token punctuation">.</span>Component <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token function">getInitialProps</span><span class="token punctuation">(</span><span class="token punctuation">{</span> req <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> userAgent <span class="token operator">=</span> req <span class="token operator">?</span> req<span class="token punctuation">.</span>headers<span class="token punctuation">[</span><span class="token string">&apos;user-agent&apos;</span><span class="token punctuation">]</span> <span class="token punctuation">:</span> navigator<span class="token punctuation">.</span>userAgent
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> userAgent <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+        Hello World <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>userAgent<span class="token punctuation">}</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>Notice that to load data when the page loads, we use <code>getInitialProps</code> which is an <a href="https://zeit.co/blog/async-and-await"><code>async</code></a> static method. It can asynchronously fetch anything that resolves to a JavaScript plain <code>Object</code>, which populates <code>props</code>.</p>
+<p>Data returned from <code>getInitialProps</code> is serialized when server rendering, similar to a <code>JSON.stringify</code>. Make sure the returned object from <code>getInitialProps</code> is a plain <code>Object</code> and not using <code>Date</code>, <code>Map</code> or <code>Set</code>.</p>
+<p>For the initial page load, <code>getInitialProps</code> will execute on the server only. <code>getInitialProps</code> will only be executed on the client when navigating to a different route via the <code>Link</code> component or using the routing APIs.</p>
+<p><em>Note: <code>getInitialProps</code> can <strong>not</strong> be used in children components. Only in <code>pages</code>.</em></p>
+<br>
+<blockquote>
+<p>If you are using some server only modules inside <code>getInitialProps</code>, make sure to <a href="https://arunoda.me/blog/ssr-and-server-only-modules">import them properly</a>.<br>
+Otherwise, it&apos;ll slow down your app.</p>
+</blockquote>
+<br>
+<p>You can also define the <code>getInitialProps</code> lifecycle method for stateless components:</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">const</span> <span class="token function-variable function">Page</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> stars <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    Next stars<span class="token punctuation">:</span> <span class="token punctuation">{</span>stars<span class="token punctuation">}</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+Page<span class="token punctuation">.</span>getInitialProps <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> req <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&apos;https://api.github.com/repos/zeit/next.js&apos;</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> json <span class="token operator">=</span> <span class="token keyword">await</span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> stars<span class="token punctuation">:</span> json<span class="token punctuation">.</span>stargazers_count <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> Page
+</pre><p><code>getInitialProps</code> receives a context object with the following properties:</p>
+<ul>
+<li><code>pathname</code> - path section of URL</li>
+<li><code>query</code> - query string section of URL parsed as an object</li>
+<li><code>asPath</code> - <code>String</code> of the actual path (including the query) shows in the browser</li>
+<li><code>req</code> - HTTP request object (server only)</li>
+<li><code>res</code> - HTTP response object (server only)</li>
+<li><code>jsonPageRes</code> - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Fetch Response</a> object (client only)</li>
+<li><code>err</code> - Error object if any error is encountered during the rendering</li>
+</ul>
+<h3 class="mume-header" id="routing">Routing</h3>
+
+<h4 class="mume-header" id="with-link">With <code>&lt;Link&gt;</code></h4>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul>
+    <li><a target="_blank" href="../../examples/hello-world">Hello World</a></li>
+  </ul>
+</details>
+<p>Client-side transitions between routes can be enabled via a <code>&lt;Link&gt;</code> component. Consider these two pages:</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token comment">// pages/index.js</span>
+<span class="token keyword">import</span> Link <span class="token keyword">from</span> <span class="token string">&apos;next/link&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    Click<span class="token punctuation">{</span><span class="token string">&apos; &apos;</span><span class="token punctuation">}</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/about<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">&gt;</span></span>here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span><span class="token string">&apos; &apos;</span><span class="token punctuation">}</span>
+    to read more
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token comment">// pages/about.js</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Welcome to About<span class="token operator">!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</pre><p><strong>Note: use <a href="#prefetching-pages"><code>&lt;Link prefetch&gt;</code></a> for maximum performance, to link and prefetch in the background at the same time</strong></p>
+<p>Client-side routing behaves exactly like the browser:</p>
+<ol>
+<li>The component is fetched</li>
+<li>If it defines <code>getInitialProps</code>, data is fetched. If an error occurs, <code>_error.js</code> is rendered</li>
+<li>After 1 and 2 complete, <code>pushState</code> is performed and the new component is rendered</li>
+</ol>
+<p>To inject the <code>pathname</code>, <code>query</code> or <code>asPath</code> in your component, you can use <a href="#using-a-higher-order-component">withRouter</a>.</p>
+<h5 class="mume-header" id="with-url-object">With URL object</h5>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul>
+    <li><a target="_blank" href="../../examples/with-url-object-routing">With URL Object Routing</a></li>
+  </ul>
+</details>
+<p>The component <code>&lt;Link&gt;</code> can also receive an URL object and it will automatically format it to create the URL string.</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token comment">// pages/index.js</span>
+<span class="token keyword">import</span> Link <span class="token keyword">from</span> <span class="token string">&apos;next/link&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    Click<span class="token punctuation">{</span><span class="token string">&apos; &apos;</span><span class="token punctuation">}</span>
+    <span class="token operator">&lt;</span>Link href<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> pathname<span class="token punctuation">:</span> <span class="token string">&apos;/about&apos;</span><span class="token punctuation">,</span> query<span class="token punctuation">:</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">&apos;Zeit&apos;</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">&gt;</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">&gt;</span></span>here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span><span class="token string">&apos; &apos;</span><span class="token punctuation">}</span>
+    to read more
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><p>That will generate the URL string <code>/about?name=Zeit</code>, you can use every property as defined in the <a href="https://nodejs.org/api/url.html#url_url_strings_and_url_objects">Node.js URL module documentation</a>.</p>
+<h5 class="mume-header" id="replace-instead-of-push-url">Replace instead of push url</h5>
+
+<p>The default behaviour for the <code>&lt;Link&gt;</code> component is to <code>push</code> a new url into the stack. You can use the <code>replace</code> prop to prevent adding a new entry.</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token comment">// pages/index.js</span>
+<span class="token keyword">import</span> Link <span class="token keyword">from</span> <span class="token string">&apos;next/link&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    Click<span class="token punctuation">{</span><span class="token string">&apos; &apos;</span><span class="token punctuation">}</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/about<span class="token punctuation">&quot;</span></span> <span class="token attr-name">replace</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">&gt;</span></span>here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span><span class="token string">&apos; &apos;</span><span class="token punctuation">}</span>
+    to read more
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><h5 class="mume-header" id="using-a-component-that-supports-onclick">Using a component that supports <code>onClick</code></h5>
+
+<p><code>&lt;Link&gt;</code> supports any component that supports the <code>onClick</code> event. In case you don&apos;t provide an <code>&lt;a&gt;</code> tag, it will only add the <code>onClick</code> event handler and won&apos;t pass the <code>href</code> property.</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token comment">// pages/index.js</span>
+<span class="token keyword">import</span> Link <span class="token keyword">from</span> <span class="token string">&apos;next/link&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    Click<span class="token punctuation">{</span><span class="token string">&apos; &apos;</span><span class="token punctuation">}</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/about<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/static/image.png<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>image<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><h5 class="mume-header" id="forcing-the-link-to-expose-href-to-its-child">Forcing the Link to expose <code>href</code> to its child</h5>
+
+<p>If child is an <code>&lt;a&gt;</code> tag and doesn&apos;t have a href attribute we specify it so that the repetition is not needed by the user. However, sometimes, you&#x2019;ll want to pass an <code>&lt;a&gt;</code> tag inside of a wrapper and the <code>Link</code> won&#x2019;t recognize it as a <em>hyperlink</em>, and, consequently, won&#x2019;t transfer its <code>href</code> to the child. In cases like that, you should define a boolean <code>passHref</code> property to the <code>Link</code>, forcing it to expose its <code>href</code> property to the child.</p>
+<p><strong>Please note</strong>: using a tag other than <code>a</code> and failing to pass <code>passHref</code> may result in links that appear to navigate correctly, but, when being crawled by search engines, will not be recognized as links (owing to the lack of <code>href</code> attribute). This may result in negative effects on your sites SEO.</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> Link <span class="token keyword">from</span> <span class="token string">&apos;next/link&apos;</span>
+<span class="token keyword">import</span> Unexpected_A <span class="token keyword">from</span> <span class="token string">&apos;third-library&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> href<span class="token punctuation">,</span> name <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Link</span> <span class="token attr-name">href</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>href<span class="token punctuation">}</span></span> <span class="token attr-name">passHref</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Unexpected_A</span><span class="token punctuation">&gt;</span></span>
+      <span class="token punctuation">{</span>name<span class="token punctuation">}</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Unexpected_A</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><h5 class="mume-header" id="disabling-the-scroll-changes-to-top-on-page">Disabling the scroll changes to top on page</h5>
+
+<p>The default behaviour of <code>&lt;Link&gt;</code> is to scroll to the top of the page. When there is a hash defined it will scroll to the specific id, just like a normal <code>&lt;a&gt;</code> tag. To prevent scrolling to the top / hash <code>scroll={false}</code> can be added to <code>&lt;Link&gt;</code>:</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Link</span> <span class="token attr-name">scroll</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token boolean">false</span><span class="token punctuation">}</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/?counter=10<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">&gt;</span></span>Disables scrolling<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/?counter=10<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">&gt;</span></span>Changes <span class="token keyword">with</span> scrolling to top<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">&gt;</span></span>
+</pre><h4 class="mume-header" id="imperatively">Imperatively</h4>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul>
+    <li><a target="_blank" href="../../examples/using-router">Basic routing</a></li>
+    <li><a target="_blank" href="../../examples/with-loading">With a page loading indicator</a></li>
+  </ul>
+</details>
+<p>You can also do client-side page transitions using the <code>next/router</code></p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> Router <span class="token keyword">from</span> <span class="token string">&apos;next/router&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    Click <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> Router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&apos;/about&apos;</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span> to read more
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><h4 class="mume-header" id="intercepting-popstate">Intercepting <code>popstate</code></h4>
+
+<p>In some cases (for example, if using a <a href="#custom-server-and-routing">custom router</a>), you may wish<br>
+to listen to <a href="https://developer.mozilla.org/en-US/docs/Web/Events/popstate"><code>popstate</code></a> and react before the router acts on it.<br>
+For example, you could use this to manipulate the request, or force an SSR refresh.</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> Router <span class="token keyword">from</span> <span class="token string">&apos;next/router&apos;</span>
+
+Router<span class="token punctuation">.</span><span class="token function">beforePopState</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span> url<span class="token punctuation">,</span> <span class="token keyword">as</span><span class="token punctuation">,</span> options <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">// I only want to allow these two routes!</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">as</span> <span class="token operator">!==</span> <span class="token string">&quot;/&quot;</span> <span class="token operator">||</span> <span class="token keyword">as</span> <span class="token operator">!==</span> <span class="token string">&quot;/other&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Have SSR render bad routes as a 404.</span>
+    window<span class="token punctuation">.</span>location<span class="token punctuation">.</span>href <span class="token operator">=</span> <span class="token keyword">as</span>
+    <span class="token keyword">return</span> <span class="token boolean">false</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><p>If you return a falsy value from <code>beforePopState</code>, <code>Router</code> will not handle <code>popstate</code>;<br>
+you&apos;ll be responsible for handling it, in that case.<br>
+See <a href="#disabling-file-system-routing">Disabling File-System Routing</a>.</p>
+<p>Above <code>Router</code> object comes with the following API:</p>
+<ul>
+<li><code>route</code> - <code>String</code> of the current route</li>
+<li><code>pathname</code> - <code>String</code> of the current path excluding the query string</li>
+<li><code>query</code> - <code>Object</code> with the parsed query string. Defaults to <code>{}</code></li>
+<li><code>asPath</code> - <code>String</code> of the actual path (including the query) shows in the browser</li>
+<li><code>push(url, as=url)</code> - performs a <code>pushState</code> call with the given url</li>
+<li><code>replace(url, as=url)</code> - performs a <code>replaceState</code> call with the given url</li>
+<li><code>beforePopState(cb=function)</code> - intercept popstate before router processes the event.</li>
+</ul>
+<p>The second <code>as</code> parameter for <code>push</code> and <code>replace</code> is an optional <em>decoration</em> of the URL. Useful if you configured custom routes on the server.</p>
+<h5 class="mume-header" id="with-url-object-1">With URL object</h5>
+
+<p>You can use an URL object the same way you use it in a <code>&lt;Link&gt;</code> component to <code>push</code> and <code>replace</code> an URL.</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> Router <span class="token keyword">from</span> <span class="token string">&apos;next/router&apos;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">handler</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  Router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    pathname<span class="token punctuation">:</span> <span class="token string">&apos;/about&apos;</span><span class="token punctuation">,</span>
+    query<span class="token punctuation">:</span> <span class="token punctuation">{</span> name<span class="token punctuation">:</span> <span class="token string">&apos;Zeit&apos;</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    Click <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handler<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>here<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span> to read more
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><p>This uses the same exact parameters as in the <code>&lt;Link&gt;</code> component.</p>
+<h5 class="mume-header" id="router-events">Router Events</h5>
+
+<p>You can also listen to different events happening inside the Router.<br>
+Here&apos;s a list of supported events:</p>
+<ul>
+<li><code>routeChangeStart(url)</code> - Fires when a route starts to change</li>
+<li><code>routeChangeComplete(url)</code> - Fires when a route changed completely</li>
+<li><code>routeChangeError(err, url)</code> - Fires when there&apos;s an error when changing routes</li>
+<li><code>beforeHistoryChange(url)</code> - Fires just before changing the browser&apos;s history</li>
+<li><code>hashChangeStart(url)</code> - Fires when the hash will change but not the page</li>
+<li><code>hashChangeComplete(url)</code> - Fires when the hash has changed but not the page</li>
+</ul>
+<blockquote>
+<p>Here <code>url</code> is the URL shown in the browser. If you call <code>Router.push(url, as)</code> (or similar), then the value of <code>url</code> will be <code>as</code>.</p>
+</blockquote>
+<p>Here&apos;s how to properly listen to the router event <code>routeChangeStart</code>:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">handleRouteChange</span> <span class="token operator">=</span> url <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;App is changing to: &apos;</span><span class="token punctuation">,</span> url<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+Router<span class="token punctuation">.</span>events<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&apos;routeChangeStart&apos;</span><span class="token punctuation">,</span> handleRouteChange<span class="token punctuation">)</span>
+</pre><p>If you no longer want to listen to that event, you can unsubscribe with the <code>off</code> method:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">Router<span class="token punctuation">.</span>events<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">&apos;routeChangeStart&apos;</span><span class="token punctuation">,</span> handleRouteChange<span class="token punctuation">)</span>
+</pre><p>If a route load is cancelled (for example by clicking two links rapidly in succession), <code>routeChangeError</code> will fire. The passed <code>err</code> will contain a <code>cancelled</code> property set to <code>true</code>.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">Router<span class="token punctuation">.</span>events<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">&apos;routeChangeError&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">,</span> url<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">.</span>cancelled<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`Route to </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>url<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> was cancelled!`</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</pre><h5 class="mume-header" id="shallow-routing">Shallow Routing</h5>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul>
+    <li><a target="_blank" href="../../examples/with-shallow-routing">Shallow Routing</a></li>
+  </ul>
+</details>
+<p>Shallow routing allows you to change the URL without running <code>getInitialProps</code>. You&apos;ll receive the updated <code>pathname</code> and the <code>query</code> via the <code>url</code> prop of the same page that&apos;s loaded, without losing state.</p>
+<p>You can do this by invoking either <code>Router.push</code> or <code>Router.replace</code> with the <code>shallow: true</code> option. Here&apos;s an example:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// Current URL is &quot;/&quot;</span>
+<span class="token keyword">const</span> href <span class="token operator">=</span> <span class="token string">&apos;/?counter=10&apos;</span>
+<span class="token keyword">const</span> <span class="token keyword">as</span> <span class="token operator">=</span> href
+Router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>href<span class="token punctuation">,</span> <span class="token keyword">as</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> shallow<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</pre><p>Now, the URL is updated to <code>/?counter=10</code>. You can see the updated URL with <code>this.props.router.query</code> inside the <code>Component</code> (make sure you are using <a href="#using-a-higher-order-component"><code>withRouter</code></a> around your <code>Component</code> to inject the <code>router</code> prop).</p>
+<p>You can watch for URL changes via <a href="https://reactjs.org/docs/react-component.html#componentdidupdate"><code>componentDidUpdate</code></a> hook as shown below:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token function">componentDidUpdate</span><span class="token punctuation">(</span>prevProps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> pathname<span class="token punctuation">,</span> query <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>router
+  <span class="token comment">// verify props have changed to avoid an infinite loop</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>query<span class="token punctuation">.</span>id <span class="token operator">!==</span> prevProps<span class="token punctuation">.</span>router<span class="token punctuation">.</span>query<span class="token punctuation">.</span>id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// fetch data based on the new query</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><blockquote>
+<p>NOTES:</p>
+<p>Shallow routing works <strong>only</strong> for same page URL changes. For an example, let&apos;s assume we have another page called <code>about</code>, and you run this:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">Router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&apos;/?counter=10&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;/about?counter=10&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> shallow<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</pre><p>Since that&apos;s a new page, it&apos;ll unload the current page, load the new one and call <code>getInitialProps</code> even though we asked to do shallow routing.</p>
+</blockquote>
+<h4 class="mume-header" id="using-a-higher-order-component">Using a Higher Order Component</h4>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul>
+    <li><a target="_blank" href="../../examples/using-with-router">Using the `withRouter` utility</a></li>
+  </ul>
+</details>
+<p>If you want to access the <code>router</code> object inside any component in your app, you can use the <code>withRouter</code> Higher-Order Component. Here&apos;s how to use it:</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> withRouter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;next/router&apos;</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">ActiveLink</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">{</span> children<span class="token punctuation">,</span> router<span class="token punctuation">,</span> href <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> style <span class="token operator">=</span> <span class="token punctuation">{</span>
+    marginRight<span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    color<span class="token punctuation">:</span> router<span class="token punctuation">.</span>pathname <span class="token operator">===</span> href<span class="token operator">?</span> <span class="token string">&apos;red&apos;</span> <span class="token punctuation">:</span> <span class="token string">&apos;black&apos;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">handleClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>href<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>href<span class="token punctuation">}</span></span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>handleClick<span class="token punctuation">}</span></span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span>style<span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token punctuation">{</span>children<span class="token punctuation">}</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+  <span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">withRouter</span><span class="token punctuation">(</span>ActiveLink<span class="token punctuation">)</span>
+</pre><p>The above <code>router</code> object comes with an API similar to <a href="#imperatively"><code>next/router</code></a>.</p>
+<h3 class="mume-header" id="prefetching-pages">Prefetching Pages</h3>
+
+<p>&#x26A0;&#xFE0F; This is a production only feature &#x26A0;&#xFE0F;</p>
+<details>
+  <summary><b>Examples</b></summary>
+  <ul><li><a target="_blank" href="../../examples/with-prefetching">Prefetching</a></li></ul>
+</details>
+<p>Next.js has an API which allows you to prefetch pages.</p>
+<p>Since Next.js server-renders your pages, this allows all the future interaction paths of your app to be instant. Effectively Next.js gives you the great initial download performance of a <em>website</em>, with the ahead-of-time download capabilities of an <em>app</em>. <a href="https://zeit.co/blog/next#anticipation-is-the-key-to-performance">Read more</a>.</p>
+<blockquote>
+<p>With prefetching Next.js only downloads JS code. When the page is getting rendered, you may need to wait for the data.</p>
+</blockquote>
+<h4 class="mume-header" id="with-link-1">With <code>&lt;Link&gt;</code></h4>
+
+<p>You can add <code>prefetch</code> prop to any <code>&lt;Link&gt;</code> and Next.js will prefetch those pages in the background.</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> Link <span class="token keyword">from</span> <span class="token string">&apos;next/link&apos;</span>
+
+<span class="token comment">// example header component</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Link</span> <span class="token attr-name">prefetch</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">&gt;</span></span>Home<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Link</span> <span class="token attr-name">prefetch</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/about<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">&gt;</span></span>About<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Link</span> <span class="token attr-name">prefetch</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/contact<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span><span class="token punctuation">&gt;</span></span>Contact<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Link</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><h4 class="mume-header" id="imperatively-1">Imperatively</h4>
+
+<p>Most prefetching needs are addressed by <code>&lt;Link /&gt;</code>, but we also expose an imperative API for advanced usage:</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> <span class="token punctuation">{</span> withRouter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;next/router&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">withRouter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">{</span> router <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&apos;/dynamic&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token constant">A</span> route transition will happen after <span class="token number">100</span>ms
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">{</span><span class="token comment">// but we can prefetch it!</span>
+    router<span class="token punctuation">.</span><span class="token function">prefetch</span><span class="token punctuation">(</span><span class="token string">&apos;/dynamic&apos;</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><p>The router instance should be only used inside the client side of your app though. In order to prevent any error regarding this subject, when rendering the Router on the server side, use the imperatively prefetch method in the <code>componentDidMount()</code> lifecycle method.</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> withRouter <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;next/router&apos;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MyLink</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> router <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props
+    router<span class="token punctuation">.</span><span class="token function">prefetch</span><span class="token punctuation">(</span><span class="token string">&apos;/dynamic&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> router <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">onClick</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">&apos;/dynamic&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token constant">A</span> route transition will happen after <span class="token number">100</span>ms
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token function">withRouter</span><span class="token punctuation">(</span>MyLink<span class="token punctuation">)</span>
+</pre><h3 class="mume-header" id="custom-server-and-routing">Custom server and routing</h3>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul>
+    <li><a target="_blank" href="../../examples/custom-server">Basic custom server</a></li>
+    <li><a target="_blank" href="../../examples/custom-server-express">Express integration</a></li>
+    <li><a target="_blank" href="../../examples/custom-server-hapi">Hapi integration</a></li>
+    <li><a target="_blank" href="../../examples/custom-server-koa">Koa integration</a></li>
+    <li><a target="_blank" href="../../examples/parameterized-routing">Parameterized routing</a></li>
+    <li><a target="_blank" href="../../examples/ssr-caching">SSR caching</a></li>
+  </ul>
+</details>
+<p>Typically you start your next server with <code>next start</code>. It&apos;s possible, however, to start a server 100% programmatically in order to customize routes, use route patterns, etc.</p>
+<p>When using a custom server with a server file, for example called <code>server.js</code>, make sure you update the scripts key in <code>package.json</code> to:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;node server.js&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;next build&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;start&quot;</span><span class="token operator">:</span> <span class="token string">&quot;NODE_ENV=production node server.js&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>This example makes <code>/a</code> resolve to <code>./pages/b</code>, and <code>/b</code> resolve to <code>./pages/a</code>:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// This file doesn&apos;t go through babel or webpack transformation.</span>
+<span class="token comment">// Make sure the syntax and sources this file requires are compatible with the current node version you are running</span>
+<span class="token comment">// See https://github.com/zeit/next.js/issues/1245 for discussions on Universal Webpack or universal Babel</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> createServer <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;http&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> parse <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;url&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> next <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;next&apos;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> dev <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">&apos;production&apos;</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">{</span> dev <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> handle <span class="token operator">=</span> app<span class="token punctuation">.</span><span class="token function">getRequestHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">prepare</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">createServer</span><span class="token punctuation">(</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Be sure to pass `true` as the second argument to `url.parse`.</span>
+    <span class="token comment">// This tells it to parse the query portion of the URL.</span>
+    <span class="token keyword">const</span> parsedUrl <span class="token operator">=</span> <span class="token function">parse</span><span class="token punctuation">(</span>req<span class="token punctuation">.</span>url<span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> pathname<span class="token punctuation">,</span> query <span class="token punctuation">}</span> <span class="token operator">=</span> parsedUrl
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pathname <span class="token operator">===</span> <span class="token string">&apos;/a&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      app<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> <span class="token string">&apos;/b&apos;</span><span class="token punctuation">,</span> query<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>pathname <span class="token operator">===</span> <span class="token string">&apos;/b&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      app<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> <span class="token string">&apos;/a&apos;</span><span class="token punctuation">,</span> query<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token function">handle</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> parsedUrl<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">,</span> err <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&apos;&gt; Ready on http://localhost:3000&apos;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</pre><p>The <code>next</code> API is as follows:</p>
+<ul>
+<li><code>next(opts: object)</code></li>
+</ul>
+<p>Supported options:</p>
+<ul>
+<li><code>dev</code> (<code>bool</code>) whether to launch Next.js in dev mode - default <code>false</code></li>
+<li><code>dir</code> (<code>string</code>) where the Next project is located - default <code>&apos;.&apos;</code></li>
+<li><code>quiet</code> (<code>bool</code>) Hide error messages containing server information - default <code>false</code></li>
+<li><code>conf</code> (<code>object</code>) the same object you would use in <code>next.config.js</code> - default <code>{}</code></li>
+</ul>
+<p>Then, change your <code>start</code> script to <code>NODE_ENV=production node server.js</code>.</p>
+<h4 class="mume-header" id="disabling-file-system-routing">Disabling file-system routing</h4>
+
+<p>By default, <code>Next</code> will serve each file in <code>/pages</code> under a pathname matching the filename (eg, <code>/pages/some-file.js</code> is served at <code>site.com/some-file</code>.</p>
+<p>If your project uses custom routing, this behavior may result in the same content being served from multiple paths, which can present problems with SEO and UX.</p>
+<p>To disable this behavior &amp; prevent routing based on files in <code>/pages</code>, simply set the following option in your <code>next.config.js</code>:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// next.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  useFileSystemPublicRoutes<span class="token punctuation">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+</pre><p>Note that <code>useFileSystemPublicRoutes</code> simply disables filename routes from SSR; client-side routing<br>
+may still access those paths. If using this option, you should guard against navigation to routes<br>
+you do not want programmatically.</p>
+<p>You may also wish to configure the client-side Router to disallow client-side redirects to filename<br>
+routes; please refer to <a href="#intercepting-popstate">Intercepting <code>popstate</code></a>.</p>
+<h4 class="mume-header" id="dynamic-assetprefix">Dynamic assetPrefix</h4>
+
+<p>Sometimes we need to set the <code>assetPrefix</code> dynamically. This is useful when changing the <code>assetPrefix</code> based on incoming requests.<br>
+For that, we can use <code>app.setAssetPrefix</code>.</p>
+<p>Here&apos;s an example usage of it:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> next <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;next&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> micro <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;micro&apos;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> dev <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">!==</span> <span class="token string">&apos;production&apos;</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">{</span> dev <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> handleNextRequests <span class="token operator">=</span> app<span class="token punctuation">.</span><span class="token function">getRequestHandler</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">prepare</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> server <span class="token operator">=</span> <span class="token function">micro</span><span class="token punctuation">(</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Add assetPrefix support based on the hostname</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>req<span class="token punctuation">.</span>headers<span class="token punctuation">.</span>host <span class="token operator">===</span> <span class="token string">&apos;my-app.com&apos;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      app<span class="token punctuation">.</span><span class="token function">setAssetPrefix</span><span class="token punctuation">(</span><span class="token string">&apos;http://cdn.com/myapp&apos;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      app<span class="token punctuation">.</span><span class="token function">setAssetPrefix</span><span class="token punctuation">(</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">handleNextRequests</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">throw</span> err
+    <span class="token punctuation">}</span>
+
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`&gt; Ready on http://localhost:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</pre><h3 class="mume-header" id="dynamic-import">Dynamic Import</h3>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul>
+    <li><a target="_blank" href="../../examples/with-dynamic-import">With Dynamic Import</a></li>
+  </ul>
+</details>
+<p>Next.js supports TC39 <a href="https://github.com/tc39/proposal-dynamic-import">dynamic import proposal</a> for JavaScript.<br>
+With that, you could import JavaScript modules (inc. React Components) dynamically and work with them.</p>
+<p>You can think dynamic imports as another way to split your code into manageable chunks.<br>
+Since Next.js supports dynamic imports with SSR, you could do amazing things with it.</p>
+<p>Here are a few ways to use dynamic imports.</p>
+<h4 class="mume-header" id="1-basic-usage-also-does-ssr">1. Basic Usage (Also does SSR)</h4>
+
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> dynamic <span class="token keyword">from</span> <span class="token string">&apos;next/dynamic&apos;</span>
+
+<span class="token keyword">const</span> DynamicComponent <span class="token operator">=</span> <span class="token function">dynamic</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;../components/hello&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Header</span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DynamicComponent</span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token constant">HOME</span> <span class="token constant">PAGE</span> is here<span class="token operator">!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><h4 class="mume-header" id="2-with-custom-loading-component">2. With Custom Loading Component</h4>
+
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> dynamic <span class="token keyword">from</span> <span class="token string">&apos;next/dynamic&apos;</span>
+
+<span class="token keyword">const</span> DynamicComponentWithCustomLoading <span class="token operator">=</span> <span class="token function">dynamic</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;../components/hello2&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  loading<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token operator">...</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Header</span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DynamicComponentWithCustomLoading</span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token constant">HOME</span> <span class="token constant">PAGE</span> is here<span class="token operator">!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><h4 class="mume-header" id="3-with-no-ssr">3. With No SSR</h4>
+
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> dynamic <span class="token keyword">from</span> <span class="token string">&apos;next/dynamic&apos;</span>
+
+<span class="token keyword">const</span> DynamicComponentWithNoSSR <span class="token operator">=</span> <span class="token function">dynamic</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;../components/hello3&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  ssr<span class="token punctuation">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Header</span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DynamicComponentWithNoSSR</span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token constant">HOME</span> <span class="token constant">PAGE</span> is here<span class="token operator">!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span>
+</pre><h4 class="mume-header" id="4-with-multiple-modules-at-once">4. With Multiple Modules At Once</h4>
+
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> dynamic <span class="token keyword">from</span> <span class="token string">&apos;next/dynamic&apos;</span>
+
+<span class="token keyword">const</span> HelloBundle <span class="token operator">=</span> <span class="token function">dynamic</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  modules<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> components <span class="token operator">=</span> <span class="token punctuation">{</span>
+      Hello1<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;../components/hello1&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      Hello2<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">&apos;../components/hello2&apos;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> components
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  render<span class="token punctuation">:</span> <span class="token punctuation">(</span>props<span class="token punctuation">,</span> <span class="token punctuation">{</span> Hello1<span class="token punctuation">,</span> Hello2 <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>
+        <span class="token punctuation">{</span>props<span class="token punctuation">.</span>title<span class="token punctuation">}</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Hello1</span> <span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Hello2</span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>HelloBundle</span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Dynamic Bundle<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</pre><h3 class="mume-header" id="custom-app">Custom <code>&lt;App&gt;</code></h3>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul>
+    <li><a target="_blank" href="../../examples/with-app-layout">Using `_app.js` for layout</a></li>
+    <li><a target="_blank" href="../../examples/with-componentdidcatch">Using `_app.js` to override `componentDidCatch`</a></li>
+  </ul>
+</details>
+<p>Next.js uses the <code>App</code> component to initialize pages. You can override it and control the page initialization. Which allows you to do amazing things like:</p>
+<ul>
+<li>Persisting layout between page changes</li>
+<li>Keeping state when navigating pages</li>
+<li>Custom error handling using <code>componentDidCatch</code></li>
+<li>Inject additional data into pages (for example by processing GraphQL queries)</li>
+</ul>
+<p>To override, create the <code>./pages/_app.js</code> file and override the App class as shown below:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span>
+<span class="token keyword">import</span> App<span class="token punctuation">,</span> <span class="token punctuation">{</span> Container <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;next/app&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">MyApp</span> <span class="token keyword">extends</span> <span class="token class-name">App</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token function">getInitialProps</span><span class="token punctuation">(</span><span class="token punctuation">{</span> Component<span class="token punctuation">,</span> router<span class="token punctuation">,</span> ctx <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> pageProps <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>Component<span class="token punctuation">.</span>getInitialProps<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      pageProps <span class="token operator">=</span> <span class="token keyword">await</span> Component<span class="token punctuation">.</span><span class="token function">getInitialProps</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> pageProps <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> pageProps <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>props
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>Container<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>Component <span class="token punctuation">{</span><span class="token operator">...</span>pageProps<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>Container<span class="token operator">&gt;</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="mume-header" id="custom-document">Custom <code>&lt;Document&gt;</code></h3>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul><li><a target="_blank" href="../../examples/with-styled-components">Styled components custom document</a></li>
+  <li><a target="_blank" href="../../examples/with-amp">Google AMP</a></li></ul>
+</details>
+<ul>
+<li>Is rendered on the server side</li>
+<li>Is used to change the initial server side rendered document markup</li>
+<li>Commonly used to implement server side rendering for css-in-js libraries like <a href="./examples/with-styled-components">styled-components</a>, <a href="./examples/with-glamorous">glamorous</a> or <a href="with-emotion">emotion</a>. <a href="https://github.com/zeit/styled-jsx">styled-jsx</a> is included with Next.js by default.</li>
+</ul>
+<p>Pages in <code>Next.js</code> skip the definition of the surrounding document&apos;s markup. For example, you never include <code>&lt;html&gt;</code>, <code>&lt;body&gt;</code>, etc. To override that default behavior, you must create a file at <code>./pages/_document.js</code>, where you can extend the <code>Document</code> class:</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token comment">// _document is only rendered on the server side and not on the client side</span>
+<span class="token comment">// Event handlers like onClick can&apos;t be added to this file</span>
+
+<span class="token comment">// ./pages/_document.js</span>
+<span class="token keyword">import</span> Document<span class="token punctuation">,</span> <span class="token punctuation">{</span> Head<span class="token punctuation">,</span> Main<span class="token punctuation">,</span> NextScript <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&apos;next/document&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">MyDocument</span> <span class="token keyword">extends</span> <span class="token class-name">Document</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token function">getInitialProps</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> initialProps <span class="token operator">=</span> <span class="token keyword">await</span> Document<span class="token punctuation">.</span><span class="token function">getInitialProps</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> <span class="token operator">...</span>initialProps <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Head</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style language-css"><span class="token punctuation">{</span><span class="token selector">`body </span><span class="token punctuation">{</span> <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> <span class="token punctuation">}</span> <span class="token comment">/* custom! */</span>`<span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Head</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>custom_class<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Main</span> <span class="token punctuation">/&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>NextScript</span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>The <code>ctx</code> object is equivalent to the one received in all <a href="#fetching-data-and-component-lifecycle"><code>getInitialProps</code></a> hooks, with one addition:</p>
+<ul>
+<li><code>renderPage</code> (<code>Function</code>) a callback that executes the actual React rendering logic (synchronously). It&apos;s useful to decorate this function in order to support server-rendering wrappers like Aphrodite&apos;s <a href="https://github.com/Khan/aphrodite#server-side-rendering"><code>renderStatic</code></a></li>
+</ul>
+<p><strong>Note: React-components outside of <code>&lt;Main /&gt;</code> will not be initialised by the browser. Do <em>not</em> add application logic here. If you need shared components in all your pages (like a menu or a toolbar), take a look at the <code>App</code> component instead.</strong></p>
+<h3 class="mume-header" id="custom-error-handling">Custom error handling</h3>
+
+<p>404 or 500 errors are handled both client and server side by a default component <code>error.js</code>. If you wish to override it, define a <code>_error.js</code> in the pages folder:</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Error</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token function">getInitialProps</span><span class="token punctuation">(</span><span class="token punctuation">{</span> res<span class="token punctuation">,</span> err <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> statusCode <span class="token operator">=</span> res <span class="token operator">?</span> res<span class="token punctuation">.</span>statusCode <span class="token punctuation">:</span> err <span class="token operator">?</span> err<span class="token punctuation">.</span>statusCode <span class="token punctuation">:</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> statusCode <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
+        <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>statusCode
+          <span class="token operator">?</span> <span class="token template-string"><span class="token string">`An error </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>statusCode<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> occurred on server`</span></span>
+          <span class="token punctuation">:</span> <span class="token string">&apos;An error occurred on client&apos;</span><span class="token punctuation">}</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="mume-header" id="reusing-the-built-in-error-page">Reusing the built-in error page</h3>
+
+<p>If you want to render the built-in error page you can by using <code>next/error</code>:</p>
+<pre data-role="codeBlock" data-info="jsx" class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">&apos;react&apos;</span>
+<span class="token keyword">import</span> Error <span class="token keyword">from</span> <span class="token string">&apos;next/error&apos;</span>
+<span class="token keyword">import</span> fetch <span class="token keyword">from</span> <span class="token string">&apos;isomorphic-unfetch&apos;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">Page</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token keyword">async</span> <span class="token function">getInitialProps</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">&apos;https://api.github.com/repos/zeit/next.js&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> statusCode <span class="token operator">=</span> res<span class="token punctuation">.</span>statusCode <span class="token operator">&gt;</span> <span class="token number">200</span> <span class="token operator">?</span> res<span class="token punctuation">.</span>statusCode <span class="token punctuation">:</span> <span class="token boolean">false</span>
+    <span class="token keyword">const</span> json <span class="token operator">=</span> <span class="token keyword">await</span> res<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> statusCode<span class="token punctuation">,</span> stars<span class="token punctuation">:</span> json<span class="token punctuation">.</span>stargazers_count <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>statusCode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Error</span> <span class="token attr-name">statusCode</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>statusCode<span class="token punctuation">}</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+        Next stars<span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>stars<span class="token punctuation">}</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><blockquote>
+<p>If you have created a custom error page you have to import your own <code>_error</code> component instead of <code>next/error</code></p>
+</blockquote>
+<h3 class="mume-header" id="custom-configuration">Custom configuration</h3>
+
+<p>For custom advanced behavior of Next.js, you can create a <code>next.config.js</code> in the root of your project directory (next to <code>pages/</code> and <code>package.json</code>).</p>
+<p>Note: <code>next.config.js</code> is a regular Node.js module, not a JSON file. It gets used by the Next server and build phases, and not included in the browser build.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// next.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">/* config options here */</span>
+<span class="token punctuation">}</span>
+</pre><p>Or use a function:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span>phase<span class="token punctuation">,</span> <span class="token punctuation">{</span>defaultConfig<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">//</span>
+  <span class="token comment">// https://github.com/zeit/</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* config options here */</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p><code>phase</code> is the current context in which the configuration is loaded. You can see all phases here: <a href="./lib/constants.js">constants</a><br>
+Phases can be imported from <code>next/constants</code>:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> <span class="token punctuation">{</span><span class="token constant">PHASE_DEVELOPMENT_SERVER</span><span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;next/constants&apos;</span><span class="token punctuation">)</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token punctuation">(</span>phase<span class="token punctuation">,</span> <span class="token punctuation">{</span>defaultConfig<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>phase <span class="token operator">===</span> <span class="token constant">PHASE_DEVELOPMENT_SERVER</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token comment">/* development only config options here */</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* config options for all phases except development here */</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h4 class="mume-header" id="setting-a-custom-build-directory">Setting a custom build directory</h4>
+
+<p>You can specify a name to use for a custom build directory. For example, the following config will create a <code>build</code> folder instead of a <code>.next</code> folder. If no configuration is specified then next will create a <code>.next</code> folder.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// next.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  distDir<span class="token punctuation">:</span> <span class="token string">&apos;build&apos;</span>
+<span class="token punctuation">}</span>
+</pre><h4 class="mume-header" id="disabling-etag-generation">Disabling etag generation</h4>
+
+<p>You can disable etag generation for HTML pages depending on your cache strategy. If no configuration is specified then Next will generate etags for every page.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// next.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  generateEtags<span class="token punctuation">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+</pre><h4 class="mume-header" id="configuring-the-ondemandentries">Configuring the onDemandEntries</h4>
+
+<p>Next exposes some options that give you some control over how the server will dispose or keep in memories pages built:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  onDemandEntries<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// period (in ms) where the server will keep pages in the buffer</span>
+    maxInactiveAge<span class="token punctuation">:</span> <span class="token number">25</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+    <span class="token comment">// number of pages that should be kept simultaneously without being disposed</span>
+    pagesBufferLength<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>This is development-only feature. If you want to cache SSR pages in production, please see <a href="https://github.com/zeit/next.js/tree/canary/examples/ssr-caching">SSR-caching</a> example.</p>
+<h4 class="mume-header" id="configuring-extensions-looked-for-when-resolving-pages-in-pages">Configuring extensions looked for when resolving pages in <code>pages</code></h4>
+
+<p>Aimed at modules like <a href="https://github.com/zeit/next-plugins/tree/master/packages/next-typescript"><code>@zeit/next-typescript</code></a>, that add support for pages ending in <code>.ts</code>. <code>pageExtensions</code> allows you to configure the extensions looked for in the <code>pages</code> directory when resolving pages.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// next.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  pageExtensions<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;jsx&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;js&apos;</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</pre><h4 class="mume-header" id="configuring-the-build-id">Configuring the build ID</h4>
+
+<p>Next.js uses a constant generated at build time to identify which version of your application is being served. This can cause problems in multi-server deployments when <code>next build</code> is ran on every server. In order to keep a static build id between builds you can provide the <code>generateBuildId</code> function:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// next.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  generateBuildId<span class="token punctuation">:</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// For example get the latest git commit hash here</span>
+    <span class="token keyword">return</span> <span class="token string">&apos;my-build-id&apos;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="mume-header" id="customizing-webpack-config">Customizing webpack config</h3>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul><li><a target="_blank" href="../../examples/with-webpack-bundle-analyzer">Custom webpack bundle analyzer</a></li></ul>
+</details>
+<p>Some commonly asked for features are available as modules:</p>
+<ul>
+<li><a href="https://github.com/zeit/next-plugins/tree/master/packages/next-css">@zeit/next-css</a></li>
+<li><a href="https://github.com/zeit/next-plugins/tree/master/packages/next-sass">@zeit/next-sass</a></li>
+<li><a href="https://github.com/zeit/next-plugins/tree/master/packages/next-less">@zeit/next-less</a></li>
+<li><a href="https://github.com/zeit/next-plugins/tree/master/packages/next-preact">@zeit/next-preact</a></li>
+<li><a href="https://github.com/zeit/next-plugins/tree/master/packages/next-typescript">@zeit/next-typescript</a></li>
+</ul>
+<p><em>Warning: The <code>webpack</code> function is executed twice, once for the server and once for the client. This allows you to distinguish between client and server configuration using the <code>isServer</code> property</em></p>
+<p>Multiple configurations can be combined together with function composition. For example:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> withTypescript <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;@zeit/next-typescript&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> withSass <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;@zeit/next-sass&apos;</span><span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">withTypescript</span><span class="token punctuation">(</span><span class="token function">withSass</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function">webpack</span><span class="token punctuation">(</span>config<span class="token punctuation">,</span> options<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Further custom configuration here</span>
+    <span class="token keyword">return</span> config
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</pre><p>In order to extend our usage of <code>webpack</code>, you can define a function that extends its config via <code>next.config.js</code>.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// next.config.js is not transformed by Babel. So you can only use javascript features supported by your version of Node.js.</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  webpack<span class="token punctuation">:</span> <span class="token punctuation">(</span>config<span class="token punctuation">,</span> <span class="token punctuation">{</span> buildId<span class="token punctuation">,</span> dev<span class="token punctuation">,</span> isServer<span class="token punctuation">,</span> defaultLoaders <span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Perform customizations to webpack config</span>
+    <span class="token comment">// Important: return the modified config</span>
+    <span class="token keyword">return</span> config
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  webpackDevMiddleware<span class="token punctuation">:</span> config <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Perform customizations to webpack dev middleware config</span>
+    <span class="token comment">// Important: return the modified config</span>
+    <span class="token keyword">return</span> config
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>The second argument to <code>webpack</code> is an object containing properties useful when customing the WebPack configuration:</p>
+<ul>
+<li><code>buildId</code> - <code>String</code> the build id used as a unique identifier between builds</li>
+<li><code>dev</code> - <code>Boolean</code> shows if the compilation is done in development mode</li>
+<li><code>isServer</code> - <code>Boolean</code> shows if the resulting configuration will be used for server side (<code>true</code>), or client size compilation (<code>false</code>).</li>
+<li><code>defaultLoaders</code> - <code>Object</code> Holds loader objects Next.js uses internally, so that you can use them in custom configuration
+<ul>
+<li><code>babel</code> - <code>Object</code> the <code>babel-loader</code> configuration for Next.js.</li>
+<li><code>hotSelfAccept</code> - <code>Object</code> the <code>hot-self-accept-loader</code> configuration. This loader should only be used for advanced use cases. For example <a href="https://github.com/zeit/next-plugins/tree/master/packages/next-typescript"><code>@zeit/next-typescript</code></a> adds it for top-level typescript pages.</li>
+</ul>
+</li>
+</ul>
+<p>Example usage of <code>defaultLoaders.babel</code>:</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// Example next.config.js for adding a loader that depends on babel-loader</span>
+<span class="token comment">// This source was taken from the @zeit/next-mdx plugin source:</span>
+<span class="token comment">// https://github.com/zeit/next-plugins/blob/master/packages/next-mdx</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  webpack<span class="token punctuation">:</span> <span class="token punctuation">(</span>config<span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    config<span class="token punctuation">.</span>module<span class="token punctuation">.</span>rules<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      test<span class="token punctuation">:</span> <span class="token regex">/\.mdx/</span><span class="token punctuation">,</span>
+      use<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        options<span class="token punctuation">.</span>defaultLoaders<span class="token punctuation">.</span>babel<span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          loader<span class="token punctuation">:</span> <span class="token string">&apos;@mdx-js/loader&apos;</span><span class="token punctuation">,</span>
+          options<span class="token punctuation">:</span> pluginOptions<span class="token punctuation">.</span>options
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> config
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="mume-header" id="customizing-babel-config">Customizing babel config</h3>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul><li><a target="_blank" href="../../examples/with-custom-babel-config">Custom babel configuration</a></li></ul>
+</details>
+<p>In order to extend our usage of <code>babel</code>, you can simply define a <code>.babelrc</code> file at the root of your app. This file is optional.</p>
+<p>If found, we&apos;re going to consider it the <em>source of truth</em>, therefore it needs to define what next needs as well, which is the <code>next/babel</code> preset.</p>
+<p>This is designed so that you are not surprised by modifications we could make to the babel configurations.</p>
+<p>Here&apos;s an example <code>.babelrc</code> file:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;presets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;next/babel&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;plugins&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</pre><p>The <code>next/babel</code> preset includes everything needed to transpile React applications. This includes:</p>
+<ul>
+<li>preset-env</li>
+<li>preset-react</li>
+<li>plugin-proposal-class-properties</li>
+<li>plugin-proposal-object-rest-spread</li>
+<li>plugin-transform-runtime</li>
+<li>styled-jsx</li>
+</ul>
+<p>These presets / plugins <strong>should not</strong> be added to your custom <code>.babelrc</code>. Instead, you can configure them on the <code>next/babel</code> preset:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;presets&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span><span class="token string">&quot;next/babel&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;preset-env&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;transform-runtime&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;styled-jsx&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;class-properties&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;plugins&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</pre><p>The <code>modules</code> option on <code>&quot;preset-env&quot;</code> should be kept to <code>false</code> otherwise webpack code splitting is disabled.</p>
+<h3 class="mume-header" id="exposing-configuration-to-the-server-client-side">Exposing configuration to the server / client side</h3>
+
+<p>The <code>next/config</code> module gives your app access to runtime configuration stored in your <code>next.config.js</code>. Place any server-only runtime config under a <code>serverRuntimeConfig</code> property and anything accessible to both client and server-side code under <code>publicRuntimeConfig</code>.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// next.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  serverRuntimeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token comment">// Will only be available on the server side</span>
+    mySecret<span class="token punctuation">:</span> <span class="token string">&apos;secret&apos;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  publicRuntimeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token comment">// Will be available on both server and client</span>
+    staticFolder<span class="token punctuation">:</span> <span class="token string">&apos;/static&apos;</span><span class="token punctuation">,</span>
+    mySecret<span class="token punctuation">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">MY_SECRET</span> <span class="token comment">// Pass through env variables</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// pages/index.js</span>
+<span class="token keyword">import</span> getConfig <span class="token keyword">from</span> <span class="token string">&apos;next/config&apos;</span>
+<span class="token comment">// Only holds serverRuntimeConfig and publicRuntimeConfig from next.config.js nothing else.</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span>serverRuntimeConfig<span class="token punctuation">,</span> publicRuntimeConfig<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">getConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>serverRuntimeConfig<span class="token punctuation">.</span>mySecret<span class="token punctuation">)</span> <span class="token comment">// Will only be available on the server side</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>publicRuntimeConfig<span class="token punctuation">.</span>staticFolder<span class="token punctuation">)</span> <span class="token comment">// Will be available on both server and client</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token punctuation">{</span><span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>publicRuntimeConfig<span class="token punctuation">.</span>staticFolder<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/logo.png`</span></span><span class="token punctuation">}</span> alt<span class="token operator">=</span><span class="token string">&quot;logo&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</pre><h3 class="mume-header" id="starting-the-server-on-alternative-hostname">Starting the server on alternative hostname</h3>
+
+<p>To start the development server using a different default hostname you can use <code>--hostname hostname_here</code> or <code>-H hostname_here</code> option with next dev. This will start a TCP server listening for connections on the provided host.</p>
+<h3 class="mume-header" id="cdn-support-with-asset-prefix">CDN support with Asset Prefix</h3>
+
+<p>To set up a CDN, you can set up the <code>assetPrefix</code> setting and configure your CDN&apos;s origin to resolve to the domain that Next.js is hosted on.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword">const</span> isProd <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">&apos;production&apos;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// You may only need to add assetPrefix in the production.</span>
+  assetPrefix<span class="token punctuation">:</span> isProd <span class="token operator">?</span> <span class="token string">&apos;https://cdn.mydomain.com&apos;</span> <span class="token punctuation">:</span> <span class="token string">&apos;&apos;</span>
+<span class="token punctuation">}</span>
+</pre><p>Note: Next.js will automatically use that prefix in the scripts it loads, but this has no effect whatsoever on <code>/static</code>. If you want to serve those assets over the CDN, you&apos;ll have to introduce the prefix yourself. One way of introducing a prefix that works inside your components and varies by environment is documented <a href="../../examples/with-universal-configuration">in this example</a>.</p>
+<h2 class="mume-header" id="production-deployment">Production deployment</h2>
+
+<p>To deploy, instead of running <code>next</code>, you want to build for production usage ahead of time. Therefore, building and starting are separate commands:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">next build
+next start
+</pre><p>For example, to deploy with <a href="https://zeit.co/now"><code>now</code></a> a <code>package.json</code> like follows is recommended:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;name&quot;</span><span class="token operator">:</span> <span class="token string">&quot;my-app&quot;</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;dependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;next&quot;</span><span class="token operator">:</span> <span class="token string">&quot;latest&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;next&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;next build&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;start&quot;</span><span class="token operator">:</span> <span class="token string">&quot;next start&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>Then run <code>now</code> and enjoy!</p>
+<p>Next.js can be deployed to other hosting solutions too. Please have a look at the <a href="https://github.com/zeit/next.js/wiki/Deployment">&apos;Deployment&apos;</a> section of the wiki.</p>
+<p>Note: <code>NODE_ENV</code> is properly configured by the <code>next</code> subcommands, if absent, to maximize performance. if you&#x2019;re using Next.js <a href="#custom-server-and-routing">programmatically</a>, it&#x2019;s your responsibility to set <code>NODE_ENV=production</code> manually!</p>
+<p>Note: we recommend putting <code>.next</code>, or your <a href="https://github.com/zeit/next.js#custom-configuration">custom dist folder</a>, in <code>.gitignore</code> or <code>.npmignore</code>. Otherwise, use <code>files</code> or <code>now.files</code> to opt-into a whitelist of files you want to deploy, excluding <code>.next</code> or your custom dist folder.</p>
+<h2 class="mume-header" id="browser-support">Browser support</h2>
+
+<p>Next.js supports IE11 and all modern browsers out of the box using <a href="https://new.babeljs.io/docs/en/next/babel-preset-env.html"><code>@babel/preset-env</code></a>. In order to support IE11 Next.js adds a global <code>Promise</code> polyfill. In cases where your own code or any external NPM dependencies you are using requires features not supported by your target browsers you will need to implement polyfills.</p>
+<p>The <a href="https://github.com/zeit/next.js/tree/canary/examples/with-polyfills">polyfills</a> example demonstrates the recommended approach to implement polyfills.</p>
+<h2 class="mume-header" id="static-html-export">Static HTML export</h2>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul><li><a target="_blank" href="../../examples/with-static-export">Static export</a></li></ul>
+</details>
+<p><code>next export</code> is a way to run your Next.js app as a standalone static app without the need for a Node.js server.<br>
+The exported app supports almost every feature of Next.js, including dynamic urls, prefetching, preloading and dynamic imports.</p>
+<p>The way <code>next export</code> works is by pre-rendering all pages possible to HTML. It does so based on a mapping of <code>pathname</code> key to page object. This mapping is called the <code>exportPathMap</code>.</p>
+<p>The page object has 2 values:</p>
+<ul>
+<li><code>page</code> - <code>String</code> the page inside the <code>pages</code> directory to render</li>
+<li><code>query</code> - <code>Object</code> the <code>query</code> object passed to <code>getInitialProps</code> when pre-rendering. Defaults to <code>{}</code></li>
+</ul>
+<h3 class="mume-header" id="usage">Usage</h3>
+
+<p>Simply develop your app as you normally do with Next.js. Then run:</p>
+<pre data-role="codeBlock" data-info="" class="language-"><code>next build
+next export
+</code></pre><p>By default <code>next export</code> doesn&apos;t require any configuration. It will generate a default <code>exportPathMap</code> containing the routes to pages inside the <code>pages</code> directory. This default mapping is available as <code>defaultPathMap</code> in the example below.</p>
+<p>If your application has dynamic routes you can add a dynamic <code>exportPathMap</code> in <code>next.config.js</code>.<br>
+This function is asynchronous and gets the default <code>exportPathMap</code> as a parameter.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// next.config.js</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  exportPathMap<span class="token punctuation">:</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>defaultPathMap<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token string">&apos;/&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> page<span class="token punctuation">:</span> <span class="token string">&apos;/&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&apos;/about&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> page<span class="token punctuation">:</span> <span class="token string">&apos;/about&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&apos;/readme.md&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> page<span class="token punctuation">:</span> <span class="token string">&apos;/readme&apos;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&apos;/p/hello-nextjs&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> page<span class="token punctuation">:</span> <span class="token string">&apos;/post&apos;</span><span class="token punctuation">,</span> query<span class="token punctuation">:</span> <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">&apos;hello-nextjs&apos;</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&apos;/p/learn-nextjs&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> page<span class="token punctuation">:</span> <span class="token string">&apos;/post&apos;</span><span class="token punctuation">,</span> query<span class="token punctuation">:</span> <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">&apos;learn-nextjs&apos;</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">&apos;/p/deploy-nextjs&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> page<span class="token punctuation">:</span> <span class="token string">&apos;/post&apos;</span><span class="token punctuation">,</span> query<span class="token punctuation">:</span> <span class="token punctuation">{</span> title<span class="token punctuation">:</span> <span class="token string">&apos;deploy-nextjs&apos;</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><blockquote>
+<p>Note that if the path ends with a directory, it will be exported as <code>/dir-name/index.html</code>, but if it ends with an extension, it will be exported as the specified filename, e.g. <code>/readme.md</code> above. If you use a file extension other than <code>.html</code>, you may need to set the <code>Content-Type</code> header to <code>text/html</code> when serving this content.</p>
+</blockquote>
+<p>Then simply run these commands:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">next build
+next <span class="token function">export</span>
+</pre><p>For that you may need to add a NPM script to <code>package.json</code> like this:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;next build&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;export&quot;</span><span class="token operator">:</span> <span class="token string">&quot;npm run build &amp;&amp; next export&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>And run it at once with:</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash"><span class="token function">npm</span> run <span class="token function">export</span>
+</pre><p>Then you have a static version of your app in the <code>out</code> directory.</p>
+<blockquote>
+<p>You can also customize the output directory. For that run <code>next export -h</code> for the help.</p>
+</blockquote>
+<p>Now you can deploy the <code>out</code> directory to any static hosting service. Note that there is an additional step for deploying to GitHub Pages, <a href="https://github.com/zeit/next.js/wiki/Deploying-a-Next.js-app-into-GitHub-Pages">documented here</a>.</p>
+<p>For an example, simply visit the <code>out</code> directory and run following command to deploy your app to <a href="https://zeit.co/now">ZEIT Now</a>.</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash">now
+</pre><h3 class="mume-header" id="copying-custom-files">Copying custom files</h3>
+
+<p>In case you have to copy custom files like a robots.txt or generate a sitemap.xml you can do this inside of <code>exportPathMap</code>.<br>
+<code>exportPathMap</code> gets a few contextual parameter to aid you with creating/copying files:</p>
+<ul>
+<li><code>dev</code> - <code>true</code> when <code>exportPathMap</code> is being called in development. <code>false</code> when running <code>next export</code>. In development <code>exportPathMap</code> is used to define routes and behavior like copying files is not required.</li>
+<li><code>dir</code> - Absolute path to the project directory</li>
+<li><code>outDir</code> - Absolute path to the <code>out</code> directory (configurable with <code>-o</code> or <code>--outdir</code>). When <code>dev</code> is <code>true</code> the value of <code>outDir</code> will be <code>null</code>.</li>
+<li><code>distDir</code> - Absolute path to the <code>.next</code> directory (configurable using the <code>distDir</code> config key)</li>
+<li><code>buildId</code> - The buildId the export is running for</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token comment">// next.config.js</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;fs&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> join <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;path&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> <span class="token punctuation">{</span> promisify <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;util&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> copyFile <span class="token operator">=</span> <span class="token function">promisify</span><span class="token punctuation">(</span>fs<span class="token punctuation">.</span>copyFile<span class="token punctuation">)</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  exportPathMap<span class="token punctuation">:</span> <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>defaultPathMap<span class="token punctuation">,</span> <span class="token punctuation">{</span>dev<span class="token punctuation">,</span> dir<span class="token punctuation">,</span> outDir<span class="token punctuation">,</span> distDir<span class="token punctuation">,</span> buildId<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>dev<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> defaultPathMap
+    <span class="token punctuation">}</span>
+    <span class="token comment">// This will copy robots.txt from your project root into the out directory</span>
+    <span class="token keyword">await</span> <span class="token function">copyFile</span><span class="token punctuation">(</span><span class="token function">join</span><span class="token punctuation">(</span>dir<span class="token punctuation">,</span> <span class="token string">&apos;robots.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">join</span><span class="token punctuation">(</span>outDir<span class="token punctuation">,</span> <span class="token string">&apos;robots.txt&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> defaultPathMap
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><h3 class="mume-header" id="limitation">Limitation</h3>
+
+<p>With <code>next export</code>, we build a HTML version of your app. At export time we will run <code>getInitialProps</code> of your pages.</p>
+<p>The <code>req</code> and <code>res</code> fields of the <code>context</code> object passed to <code>getInitialProps</code> are not available as there is no server running.</p>
+<blockquote>
+<p>You won&apos;t be able to render HTML dynamically when static exporting, as we pre-build the HTML files. If you want to do dynamic rendering use <code>next start</code> or the custom server API</p>
+</blockquote>
+<h2 class="mume-header" id="multi-zones">Multi Zones</h2>
+
+<details>
+  <summary><b>Examples</b></summary>
+  <ul><li><a target="_blank" href="../../examples/with-zones">With Zones</a></li></ul>
+</details>
+<p>A zone is a single deployment of a Next.js app. Just like that, you can have multiple zones. Then you can merge them as a single app.</p>
+<p>For an example, you can have two zones like this:</p>
+<ul>
+<li><a href="https://docs.my-app.com">https://docs.my-app.com</a> for serving <code>/docs/**</code></li>
+<li><a href="https://ui.my-app.com">https://ui.my-app.com</a> for serving all other pages</li>
+</ul>
+<p>With multi zones support, you can merge both these apps into a single one. Which allows your customers to browse it using a single URL. But you can develop and deploy both apps independently.</p>
+<blockquote>
+<p>This is exactly the same concept as microservices, but for frontend apps.</p>
+</blockquote>
+<h3 class="mume-header" id="how-to-define-a-zone">How to define a zone</h3>
+
+<p>There are no special zones related APIs. You only need to do following things:</p>
+<ul>
+<li>Make sure to keep only the pages you need in your app. (For an example, <a href="https://ui.my-app.com">https://ui.my-app.com</a> should not contain pages for <code>/docs/**</code>)</li>
+<li>Make sure your app has an <a href="https://github.com/zeit/next.js#cdn-support-with-asset-prefix">assetPrefix</a>. (You can also define the assetPrefix <a href="https://github.com/zeit/next.js#dynamic-assetprefix">dynamically</a>.)</li>
+</ul>
+<h3 class="mume-header" id="how-to-merge-them">How to merge them</h3>
+
+<p>You can merge zones using any HTTP proxy.</p>
+<p>You can use <a href="https://github.com/zeit/micro-proxy">micro proxy</a> as your local proxy server. It allows you to easily define routing rules like below:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">&quot;rules&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span><span class="token property">&quot;pathname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/docs**&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;method&quot;</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">&quot;GET&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;POST&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;OPTIONS&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token property">&quot;dest&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://docs.my-app.com&quot;</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span><span class="token property">&quot;pathname&quot;</span><span class="token operator">:</span> <span class="token string">&quot;/**&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;dest&quot;</span><span class="token operator">:</span> <span class="token string">&quot;https://ui.my-app.com&quot;</span><span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</pre><p>For the production deployment, you can use the <a href="https://zeit.co/docs/features/path-aliases">path alias</a> feature if you are using <a href="https://zeit.co/now">ZEIT now</a>. Otherwise, you can configure your existing proxy server to route HTML pages using a set of rules as show above.</p>
+<h2 class="mume-header" id="recipes">Recipes</h2>
+
+<ul>
+<li><a href="https://www.raygesualdo.com/posts/301-redirects-with-nextjs/">Setting up 301 redirects</a></li>
+<li><a href="https://arunoda.me/blog/ssr-and-server-only-modules">Dealing with SSR and server only modules</a></li>
+<li><a href="https://github.com/builderbook/builderbook">Building with React-Material-UI-Next-Express-Mongoose-Mongodb</a></li>
+<li><a href="https://github.com/async-labs/saas">Build a SaaS Product with React-Material-UI-Next-MobX-Express-Mongoose-MongoDB-TypeScript</a></li>
+</ul>
+<h2 class="mume-header" id="faq">FAQ</h2>
+
+<details>
+  <summary>Is this production ready?</summary>
+  Next.js has been powering https://zeit.co since its inception.
+<p>We&#x2019;re ecstatic about both the developer experience and end-user performance, so we decided to share it with the community.</p>
+</details>
+<details>
+  <summary>How big is it?</summary>
+<p>The client side bundle size should be measured in a per-app basis.<br>
+A small Next main bundle is around 65kb gzipped.</p>
+</details>
+<details>
+  <summary>Is this like `create-react-app`?</summary>
+<p>Yes and No.</p>
+<p>Yes in that both make your life easier.</p>
+<p>No in that it enforces a <em>structure</em> so that we can do more advanced things like:</p>
+<ul>
+<li>Server side rendering</li>
+<li>Automatic code splitting</li>
+</ul>
+<p>In addition, Next.js provides two built-in features that are critical for every single website:</p>
+<ul>
+<li>Routing with lazy component loading: <code>&lt;Link&gt;</code> (by importing <code>next/link</code>)</li>
+<li>A way for components to alter <code>&lt;head&gt;</code>: <code>&lt;Head&gt;</code> (by importing <code>next/head</code>)</li>
+</ul>
+<p>If you want to create re-usable React components that you can embed in your Next.js app or other React applications, using <code>create-react-app</code> is a great idea. You can later <code>import</code> it and keep your codebase clean!</p>
+</details>
+<details>
+  <summary>How do I use CSS-in-JS solutions?</summary>
+<p>Next.js bundles <a href="https://github.com/zeit/styled-jsx">styled-jsx</a> supporting scoped css. However you can use any CSS-in-JS solution in your Next app by just including your favorite library <a href="#css-in-js">as mentioned before</a> in the document.</p>
+</details>
+<details>
+  <summary>What syntactic features are transpiled? How do I change them?</summary>
+<p>We track V8. Since V8 has wide support for ES6 and <code>async</code> and <code>await</code>, we transpile those. Since V8 doesn&#x2019;t support class decorators, we don&#x2019;t transpile those.</p>
+<p>See the  documentation about <a href="#customizing-babel-config">customizing the babel config</a> and <a href="./build/babel/preset.js">next/preset</a> for more information.</p>
+</details>
+<details>
+  <summary>Why a new Router?</summary>
+<p>Next.js is special in that:</p>
+<ul>
+<li>Routes don&#x2019;t need to be known ahead of time</li>
+<li>Routes are always lazy-loadable</li>
+<li>Top-level components can define <code>getInitialProps</code> that should <em>block</em> the loading of the route (either when server-rendering or lazy-loading)</li>
+</ul>
+<p>As a result, we were able to introduce a very simple approach to routing that consists of two pieces:</p>
+<ul>
+<li>Every top level component receives a <code>url</code> object to inspect the url or perform modifications to the history</li>
+<li>A <code>&lt;Link /&gt;</code> component is used to wrap elements like anchors (<code>&lt;a/&gt;</code>) to perform client-side transitions</li>
+</ul>
+<p>We tested the flexibility of the routing with some interesting scenarios. For an example, check out <a href="https://github.com/zeit/nextgram">nextgram</a>.</p>
+</details>
+<details>
+<summary>How do I define a custom fancy route?</summary>
+<p>We <a href="#custom-server-and-routing">added</a> the ability to map between an arbitrary URL and any component by supplying a request handler.</p>
+<p>On the client side, we have a parameter call <code>as</code> on <code>&lt;Link&gt;</code> that <em>decorates</em> the URL differently from the URL it <em>fetches</em>.</p>
+</details>
+<details>
+<summary>How do I fetch data?</summary>
+<p>It&#x2019;s up to you. <code>getInitialProps</code> is an <code>async</code> function (or a regular function that returns a <code>Promise</code>). It can retrieve data from anywhere.</p>
+</details>
+<details>
+  <summary>Can I use it with GraphQL?</summary>
+<p>Yes! Here&apos;s an example with <a href="./examples/with-apollo">Apollo</a>.</p>
+</details>
+<details>
+<summary>Can I use it with Redux?</summary>
+<p>Yes! Here&apos;s an <a href="./examples/with-redux">example</a></p>
+</details>
+<details>
+<summary>Can I use Next with my favorite Javascript library or toolkit?</summary>
+<p>Since our first release we&apos;ve had <strong>many</strong> example contributions, you can check them out in the <a href="./examples">examples</a> directory</p>
+</details>
+<details>
+<summary>What is this inspired by?</summary>
+<p>Many of the goals we set out to accomplish were the ones listed in <a href="http://rauchg.com/2014/7-principles-of-rich-web-applications/">The 7 principles of Rich Web Applications</a> by Guillermo Rauch.</p>
+<p>The ease-of-use of PHP is a great inspiration. We feel Next.js is a suitable replacement for many scenarios where you otherwise would use PHP to output HTML.</p>
+<p>Unlike PHP, we benefit from the ES6 module system and every file exports a <strong>component or function</strong> that can be easily imported for lazy evaluation or testing.</p>
+<p>As we were researching options for server-rendering React that didn&#x2019;t involve a large number of steps, we came across <a href="https://github.com/facebookarchive/react-page">react-page</a> (now deprecated), a similar approach to Next.js by the creator of React Jordan Walke.</p>
+</details>
+<h2 class="mume-header" id="contributing">Contributing</h2>
+
+<p>Please see our <a href="./contributing.md">contributing.md</a></p>
+<h2 class="mume-header" id="authors">Authors</h2>
+
+<ul>
+<li>Arunoda Susiripala (<a href="https://twitter.com/arunoda">@arunoda</a>) &#x2013; <a href="https://zeit.co">ZEIT</a></li>
+<li>Tim Neutkens (<a href="https://twitter.com/timneutkens">@timneutkens</a>) &#x2013; <a href="https://zeit.co">ZEIT</a></li>
+<li>Naoyuki Kanezawa (<a href="https://twitter.com/nkzawa">@nkzawa</a>) &#x2013; <a href="https://zeit.co">ZEIT</a></li>
+<li>Tony Kovanen (<a href="https://twitter.com/tonykovanen">@tonykovanen</a>) &#x2013; <a href="https://zeit.co">ZEIT</a></li>
+<li>Guillermo Rauch (<a href="https://twitter.com/rauchg">@rauchg</a>) &#x2013; <a href="https://zeit.co">ZEIT</a></li>
+<li>Dan Zajdband (<a href="https://twitter.com/impronunciable">@impronunciable</a>) &#x2013; Knight-Mozilla / Coral Project</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

@@ -1,14 +1,14 @@
-## 如何使用
+## How to use
 
-### 设置
+### Setup
 
-安装:
+Install it:
 
 ```bash
 npm install --save next react react-dom
 ```
 
-然后添加一个脚本到你的文件夹里，像这样:
+and add a script to your package.json like this:
 
 ```json
 {
@@ -20,13 +20,16 @@ npm install --save next react react-dom
 }
 ```
 
-在此之后，文件系统是主要的 API。 每一个。 Js 文件变成了一条路由，可以自动处理和呈现
-填充 `./pages/index.js` 你的项目当中:
+After that, the file-system is the main API. Every `.js` file becomes a route that gets automatically processed and rendered.
+
+Populate `./pages/index.js` inside your project:
 
 ```jsx
 export default () => <div>Welcome to next.js!</div>
 ```
-然后运行 npm 运行 dev 并转到 http: / / localhost: 3000。 要使用另一个端口，您可以运行 npm run dev ——-p 您的端口在这里。
+
+and then just run `npm run dev` and go to `http://localhost:3000`. To use another port, you can run `npm run dev -- -p <your port here>`.
+
 So far, we get:
 
 - Automatic transpilation and bundling (with webpack and babel)
